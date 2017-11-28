@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 # I don't know web development, so I can't think how to actually test this kind
 # of thing without actually running it in a browser. This will do for this
 # exercise.

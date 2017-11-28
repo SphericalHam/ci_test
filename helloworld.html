@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+			Hello world example page
+		</title>
+	</head>
+	<body>
+		<div id="mytext">Some before text...</div>
+		<button onclick="changeText()";>Change text</button>
+		<script>
+			function changeText() {
+				let tochange = document.getElementById("mytext");
+				tochange.innerHTML = "Some new text! This wasn't here before the button was pushed.";
+			}
+		</script>
+	</body>
+</html>

@@ -16,8 +16,11 @@ jobs:
            command: pip install awscli --upgrade --user
        - checkout
        - run:
-           name: Deploy to S3 if tests pass (only on master)
-           command: ~/.local/bin/aws s3 cp helloworld.html script.js s3://circleci.entropyonwheels.com/
+           name: Deploy html to S3 if tests pass (only on master)
+           command: ~/.local/bin/aws s3 cp helloworld.html s3://circleci.entropyonwheels.com/
+       - run:
+           name: Deploy js to S3 if tests pass (only on master)
+           command: ~/.local/bin/aws s3 cp script.js s3://circleci.entropyonwheels.com/
 
 
 workflows:

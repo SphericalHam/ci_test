@@ -9,6 +9,6 @@ set -x
 export RET=0
 
 grep -q 'document.getElementById("mytext")' script.js || export RET=1
-grep -q 'onnerHTML = "Some new text' script.js || export RET=1
+grep -q 'innerHTML = "Some new text' script.js || export RET=1
 
 exit $RET

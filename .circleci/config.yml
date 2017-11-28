@@ -12,6 +12,9 @@ jobs:
        - image: circleci/python:latest
      steps:
        - run:
+           name: Install AWS cli
+           command: pip install awscli --upgrade --user
+       - run:
            name: Deploy to S3 if tests pass (only on master)
            command: aws s3 sync . s3://circleci.entropyonwheels.com/ --delete
 

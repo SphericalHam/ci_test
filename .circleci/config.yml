@@ -17,7 +17,7 @@ jobs:
        - checkout
        - run:
            name: Deploy to S3 if tests pass (only on master)
-           command: ~/.local/bin/aws s3 sync . s3://circleci.entropyonwheels.com/ --delete
+           command: ~/.local/bin/aws s3 cp helloworld.html script.js s3://circleci.entropyonwheels.com/
 
 
 workflows:
